@@ -17,9 +17,9 @@
         Dim dblTotalCost As Double
 
         'Extract user typed quantities from text boxes and convert to integers
-        intNumBeefDogs = Int(txtBeefDogs.Text)
-        intNumPorkDogs = Int(txtPorkDogs.Text)
-        intNumTurkeyDogs = Int(txtTurkeyDogs.Text)
+        intNumBeefDogs = Convert.ToInt32(txtBeefDogs.Text)
+        intNumPorkDogs = Convert.ToInt32(txtPorkDogs.Text)
+        intNumTurkeyDogs = Convert.ToInt32(txtTurkeyDogs.Text)
 
         'Calculate total number of hot dogs ordered
         intNumHotDogs = intNumBeefDogs + intNumPorkDogs + intNumTurkeyDogs
