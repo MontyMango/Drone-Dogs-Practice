@@ -12,13 +12,27 @@
         Dim intNumTurkeyDogs As Integer
         Dim intNumHotDogs As Integer
 
+        Dim dblSubTotal As Double
+        Dim dblSalesTax As Double
+        Dim dblTotalCost As Double
+
         'Extract user typed quantities from text boxes and convert to integers
+        intNumBeefDogs = Int(txtBeefDogs.Text)
+        intNumPorkDogs = Int(txtPorkDogs.Text)
+        intNumTurkeyDogs = Int(txtTurkeyDogs.Text)
 
         'Calculate total number of hot dogs ordered
+        intNumHotDogs = intNumBeefDogs + intNumPorkDogs + intNumTurkeyDogs
 
         'Calculate subtotal, sales tax, and total amounts
+        dblSubTotal = intNumHotDogs * dbl_Hot_Dog_Price
+        dblSalesTax = dblSubTotal * dbl_Sales_Tax_Rate
+        dblTotalCost = dblSubTotal + dblSalesTax
 
         'Convert numbers back to text and display in text boxes
+        txtSubtotal.Text = dblSubTotal
+        txtSalesTax.Text = dblSalesTax
+        txtTotalCost.Text = dblTotalCost
 
 
     End Sub
