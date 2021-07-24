@@ -30,9 +30,9 @@
         dblTotalCost = dblSubTotal + dblSalesTax
 
         'Convert numbers back to text and display in text boxes
-        txtSubtotal.Text = dblSubTotal
-        txtSalesTax.Text = dblSalesTax
-        txtTotalCost.Text = dblTotalCost
+        txtSubtotal.Text = dblSubTotal.ToString("c2")
+        txtSalesTax.Text = dblSalesTax.ToString("c2")
+        txtTotalCost.Text = dblTotalCost.ToString("c2")
 
 
     End Sub
@@ -40,13 +40,14 @@
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
 
         'Close form
+        Me.Close()
 
     End Sub
 
     Private Sub btnSubmit_Click(sender As Object, e As EventArgs) Handles btnSubmit.Click
 
         'Display message box thanking the user
-
+        MsgBox("Thank you for placing an order with us!", Title:="Thank you!")
     End Sub
 
 End Class

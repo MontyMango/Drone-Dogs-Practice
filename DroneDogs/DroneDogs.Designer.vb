@@ -169,7 +169,7 @@ Partial Class DroneDogsOrder
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(89, 23)
         Me.btnExit.TabIndex = 15
-        Me.btnExit.Text = "EXIT?"
+        Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'btnSubmit
